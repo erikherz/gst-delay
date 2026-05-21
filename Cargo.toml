@@ -1,0 +1,16 @@
+[package]
+name = "gst-delay"
+version = "0.1.0"
+edition = "2021"
+description = "GStreamer element that delays buffers by a fixed amount (PTS/DTS shift)"
+license = "MPL-2.0"
+repository = "https://github.com/erikherz/gst-delay"
+
+[lib]
+name = "gstdelay"
+crate-type = ["cdylib", "rlib"]
+path = "src/lib.rs"
+
+[dependencies]
+gst = { package = "gstreamer", version = "0.23" }
+gst-base = { package = "gstreamer-base", version = "0.23" }
